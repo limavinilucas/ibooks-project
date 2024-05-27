@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> iBooks </title>
+    
+    <link rel="icon" type="image/svg" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="img-header" width="200px" src="images/iBooks-LogoUp.svg" alt="img-ibooks"></a>
+        
+        <div class="search-box">
+            <input class="search-bar" placeholder="" type="search">
+        </div>
+
+        <nav class="link-up-page">
+            <a href="faleConosco.html" target="_blank"> Fale conosco </a>
+            |  
+            <a href="sobreNos.html" target="_blank"> Sobre nós </a>
+        </nav>
+    </header>
+    <main>
+        <section class="title-header"></section>
+        <section>
+            <section class="text-box">
+                <h2> Recepção </h2>
+                <p>
+                    Seja bem-vindo ao iBooks.com, lar dos melhores preços de livros do mercado!
+                    Sinta-se a vontade para procurar o que for do seu desejo ou utilidade! Temos livros de variados tamanhos, gêneros,
+                    faixas etárias e temos uma área especial para os mais vendidos. (Sujiro dar uma passada lá, pode ter exatamente o que você está
+                    procurando ;) )
+                </p>
+            </section>
+            
+            <section class="best-sellers">
+                <h2> Nossos Best-Sellers! </h2>
+                <br>
+                <div id="bests" class="owl-carousel"></div>
+            </section>
+            
+            <section class="romance-area">
+                <h2> Se apaxione com esses romances! </h2>
+                <br>
+                <div id="romances" class="owl-carousel"></div>
+            </section>
+            
+            <section class="fantasy-area">
+                <h2> Mergulhe nas aventuras dessas fantasias! </h2>
+                <br>
+                <div id="fantasy" class="owl-carousel"></div>
+            </section>
+            
+            <section class="text-box">
+                <h2> Alguma sugestão de livro? Fale aqui :) </h2>
+                <div class="suggest-box">
+                        <input id="suggest-input" type="text" class="suggest-input" placeholder="Digite aqui...">
+                        <button class="submitbtn" id="suggest-btn"></button>
+                </div>
+                <br>
+                <br>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-section">
+            <a href=""><img class="footer-logo-img" width="200px" src="images/iBooks-LogoUp.svg" alt=""></a>
+
+            <div class="logos-footer">
+                <a href="https://www.linkedin.com/in/lucas-vinícius-09a78128b/" target="_blank"><img width="30px" src="images/linkedIn.svg" alt=""></a> |
+                <a href="https://instagram.com/limavinilucas" target="_blank"><img width="30px" src="images/instagram.svg" alt=""></a> |
+                <a href="https:://gmail.com" target="_blank"><img width="40px" src="images/gmail.svg" alt=""></a>
+            </div>
+        </section>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                responsive: {
+                    100: {
+                        items: 1
+                    }
+                },
+                nav: true,
+                navText: ["<img src='images/seta-esquerda.svg' alt='imagem do projeto'>", "<img src='images/seta-direita.svg' alt='imagem do projeto'>"],
+                autoplay: true,
+                autoplayTimeout: 10000
+            });
+        });
+    </script>
+</body>
+</html>
